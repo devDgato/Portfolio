@@ -1,0 +1,239 @@
+/* Header */
+
+@media(max-width: 600px) {
+    .header .menu {
+        display: flex;
+        justify-content: end;
+    }
+
+    .header .menu .menu-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 50%;
+        height: 100vh;
+        position: fixed;
+        right: 0;
+        top: 0;
+        background-color: #302f2f;
+        clip-path: circle(100px at 90% -20%);
+        pointer-events: none;
+        transition: .6s ease-out;
+    }
+
+    .header .menu .menu-hamburguer {
+        display: block;
+        padding: 0;
+        margin-bottom: .4rem;
+        border: none;
+        border-top: 3px solid var(--color-white);
+        background-color: transparent;
+        transition: all .3s ease-in-out;
+        z-index: 1;
+    }
+
+    .header .menu .menu-hamburguer:hover {
+        opacity: .8;
+        cursor: pointer;
+    }
+
+    .header .menu .menu-hamburguer::before,
+    .header .menu .menu-hamburguer::after {
+        content: "";
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin-top: .6rem;
+        background-color: var(--color-white);
+    }
+
+    /* ATIVO */
+
+    .header .menu.active .menu-links {
+        clip-path: circle(1400px at 90% -18%);
+        pointer-events: all;
+    }
+
+    .header .menu.active .menu-hamburguer {
+        border-top-color: transparent;
+    }
+
+    .header .menu.active .menu-hamburguer::before {
+        transition: all .2s ease-in-out;
+        transform: rotate(-45deg) translate(-2px, -1px);
+    }
+
+    .header .menu.active .menu-hamburguer::after {
+        transition: all .2s ease-in-out;
+        transform: rotate(45deg) translate(-7px, -5px);
+    }
+}
+
+/* End Header */
+
+
+
+/* Person */
+
+@media(max-width: 980px) {
+    .person {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 30px;
+        gap: 70px;
+    }
+
+    .person .person-content {
+        width: 100%;
+    }
+
+    .person .person-content .person-name {
+        justify-content: center;
+        padding-top: 40px;
+    }
+
+    .person .stacks-content {
+        flex-wrap: wrap;
+        padding-top: 45px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .person .stacks-content .stacks ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .person .stacks-content h3 {
+        margin-right: 12px;
+        font-size: 3rem;
+    }
+
+    .person .person-background {
+        width: 100%;
+        height: 70vh;
+        padding: 50px 0;
+        gap: 18px;
+    }
+
+    .person .person-background .links {
+        display: flex;
+        gap: 12px;
+    }
+
+    .person .person-background .wrapper-profile-photo {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .person .person-background::after {
+        background:
+            linear-gradient(90deg, transparent 5%, var(--color-black)),
+            linear-gradient(180deg, transparent 5%, var(--color-black)),
+            linear-gradient(0deg, transparent 5%, var(--color-black));
+    }
+
+    @media(max-width: 600px) {
+        .person .person-content .person-name h1 {
+            font-size: 4rem;
+            line-height: 48px;
+        }
+    }
+
+    @media (max-width: 375px) {
+        .person .person-background .wrapper-profile-photo {
+            max-width: 260px;
+        }
+    }
+}
+
+/* End Person */
+
+
+
+/* About */
+
+@media(max-width: 980px) {
+    .about {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .about .box-about {
+        justify-content: center;
+        align-items: center;
+        max-width: 600px;
+        width: 100%;
+    }
+
+    .about .box-about h2 {
+        text-align: center;
+    }
+
+    .about .background-about {
+        display: none;
+        width: 100%;
+    }
+}
+
+/* End About */
+
+
+
+/* Projects */
+
+@media (max-width: 1390px) {
+
+    .projects .wrapper-projects {
+        flex-wrap: wrap;
+        gap: 24px 0px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 980px) {
+    .projects .wrapper-projects {
+        flex-wrap: wrap;
+        gap: 24px 0px;
+    }
+}
+
+@media (max-width: 375px) {
+    .projects .wrapper-projects .card-project {
+        max-width: 290px;
+        width: 100%;
+    }
+
+    .projects .projects-title h2 {
+        text-align: center;
+    }
+}
+
+/* End Projects */
+
+
+
+/* Contacts */
+
+@media(max-width: 980px) {
+    .contacts {
+        padding-bottom: 30px;
+    }
+
+    .contacts .content-icons-wrapper {
+        flex-wrap: wrap;
+        gap: 10px 0;
+    }
+
+}
+
+@media (max-width: 375px) {
+    .contacts .contact-title h2 {
+        text-align: center;
+    }
+}
+
+/* End Contacts */
